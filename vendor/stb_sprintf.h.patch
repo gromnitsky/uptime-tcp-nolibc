@@ -1,0 +1,19 @@
+--- vendor/stb_sprintf.h.orig	2024-12-25 13:04:16.591187943 +0200
++++ vendor/stb_sprintf.h	2024-12-25 13:04:43.305413882 +0200
+@@ -29,6 +29,7 @@
+ #ifndef STB_SPRINTF_H_INCLUDE
+ #define STB_SPRINTF_H_INCLUDE
+ 
++#include "../snprintf.h"
+ /*
+ Single file sprintf replacement.
+ 
+@@ -193,8 +194,6 @@
+ #define STBSP__NOTUSED(v)  (void)sizeof(v)
+ #endif
+ 
+-#include <stdarg.h> // for va_arg(), va_list()
+-#include <stddef.h> // size_t, ptrdiff_t
+ 
+ #ifndef STB_SPRINTF_MIN
+ #define STB_SPRINTF_MIN 512 // how many characters per callback
